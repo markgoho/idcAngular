@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "idcAngular"
+    }
+  },
+  "defaultProject": "idcAngular",
+  "cli": {
+    "analytics": "7147a5ac-44d8-4525-9c11-cf1a47d22733"
+  }
 }

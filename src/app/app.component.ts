@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'idcAngular';
+
+  // How are you going to inject the service that makes the http calls?
+
+  // What service will you inject?
 }
