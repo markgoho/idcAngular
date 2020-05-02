@@ -1,14 +1,26 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+
+// Yup more imports
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'idcAngular';
 
-  // How are you going to inject the service that makes the http calls?
+  // class property called `data`
+  // it is of type `any`
+  data: any;
 
-  // What service will you inject?
+  constructor(private http: HttpClient) {}
+
+  // the `: void` part just means ngOnInit isn't returning anything
+  ngOnInit(): void {
+
+    // Add your GET endpoint between the single quotes
+    this.http.get('').subscribe((apiData) => (this.data = apiData));
+  }
 }
