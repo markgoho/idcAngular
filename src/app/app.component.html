@@ -1,1 +1,15 @@
 {{ data | json }}
+
+<!-- If you've chosen an api that nests the data it returns, you may want to
+access those nested properties with `.` notation.app-root
+
+For example:
+
+{
+  "value": {
+    "name": "Frank"
+  }
+}
+
+...would be accessed as `data.value.name`. But you might get an error in the console
+by doing exactly this, so try using this syntax: `data?.value?.name` -->
